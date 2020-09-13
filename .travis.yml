@@ -16,7 +16,8 @@ deploy:
     env: "DockerReact-env"
     bucket_name: "elasticbeanstalk-eu-west-1-398692132493"
     bucket_path: "docker-react" # by default the app name if no folder in s3
-    access_key_id: $access-key-id
+    access_key_id: 
+        secure: $access-key-id
     secret_access_key: 
         secure: "$secret-access-key"
     on:
