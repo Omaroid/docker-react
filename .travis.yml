@@ -8,3 +8,15 @@ before_install:
 
 script:
     - docker run -e CI=true omaroid/docker-react npm run test
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-1"
+    app: "docker-react"
+    env: "DockerReact-env"
+    bucket_name: "elasticbeanstalk-us-east-1-239021260390"
+    bucket_path: "docker-react" # by default the app name if no folder in s3
+    access_key_id: $access-key-id
+    secret_access_key: $secret-access-key
+    on:
+        branch: master
