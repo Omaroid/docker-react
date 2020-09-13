@@ -9,6 +9,10 @@ before_install:
 script:
     - docker run -e CI=true omaroid/docker-react npm run test
 
+before_deploy:
+    - unset access-key-id
+    - unset secret-access-key
+
 deploy:
     provider: elasticbeanstalk
     region: "eu-west-1"
