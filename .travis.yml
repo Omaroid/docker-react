@@ -12,10 +12,10 @@ script:
 deploy:
     provider: elasticbeanstalk
     region: "eu-west-1"
-    app: "docker-react1"
+    app: "docker-react-1"
     env: "DockerReact1-env"
     bucket_name: "elasticbeanstalk-eu-west-1-398692132493"
-    bucket_path: "docker-react1" # by default the app name if no folder in s3
+    bucket_path: "docker-react-1" # by default the app name if no folder in s3
     on:
         branch: master
     access_key_id: $ACCESSKEYID
